@@ -60,7 +60,7 @@ public class DynamicControlsTest extends BaseTest {
 
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         int numberOfElements = driver.findElements(By.cssSelector("[type=checkbox]")).size();
-        assertEquals(numberOfElements, 0, "??????? ???????????? ?? ????????");
+        assertEquals(numberOfElements, 0, "Input is enabled");
         boolean isDisabled = driver.findElement(By.cssSelector("[type=text]")).isEnabled();
         assertFalse(isDisabled, "The input is enabled");
         driver.findElement(By.xpath("//button[text()='Enable']")).click();
